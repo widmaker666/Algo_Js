@@ -15,7 +15,7 @@ const secondSubjectArr1 = [3, 7, 8, 3, 6, 1];
 const secondSubjectArr2 = [1, 4, 5, 8];
 
 // Exercice 1
-// Résous le sujet 1 avec une complexité algorithmique de O(n²), c'est-à-dire que ton programme devra comparer chaque élément entre eux à l'aide de 2 boucles imbriquées.
+// Résouds le sujet 1 avec une complexité algorithmique de O(n²), c'est-à-dire que ton programme devra comparer chaque élément entre eux à l'aide de 2 boucles imbriquées.
 const checkSum = (array, num) => {
   const numbers = [...array];
   //La premiere boucle FOR veut dire que i commence à 0 (i=0), la condition qui va faire que l'incrémentation vas se faire jusqu'à le nombre d'occurence du tableau (disons 10 éléments dans le tableau) et i++ veux dire qu'on ajoute à chaque fois 1 au i du départ jusqu'à ce que i ne soit plus inférieur à .length (10 par exemple)
@@ -26,7 +26,7 @@ const checkSum = (array, num) => {
   for (let i = 0; i < numbers.length; i++) {
     //C'est le même principe sauf que là on ne veux pas vérifier le premier chiffre du tableau mais le deuxième chiffre grâce à j = i + 1, et ensuite on a la même logique que pour la boucle du dessus
     for (let j = i + 1; j < numbers.length; j++) {
-      //Ici on dit numbers à [l'index i] (index qui augmente de 1 à chaque boucle) + numbers[l'index j] === num et return true
+      //Ici dans le numbers[i] i = au chiffre présent dans le tableau à l'indice i, plus la boucle avance plus i défile dans le tableau et la valeur change. Idem pour [j] mais se sera le chiffre en index i + 1, et lorsque la condition et remplie la boucle s'arrête.
       if (numbers[i] + numbers[j] === num) return true;
     }
     return false;
@@ -38,7 +38,7 @@ console.log(checkSum(firstSubjectArr2, firstSubjectK2)); // should return false
 console.log("----------------------------------------");
 
 // Exercice 2
-// Résous le sujet 2 avec une complexité algorithmique de O(n²), c'est-à-dire que ton programme devra comparer chaque élément entre eux à l'aide de 2 boucles imbriquées.
+// Résouds le sujet 2 avec une complexité algorithmique de O(n²), c'est-à-dire que ton programme devra comparer chaque élément entre eux à l'aide de 2 boucles imbriquées.
 const getSun = (array) => {
   const buildings = [...array];
   let count = 1;
@@ -57,7 +57,7 @@ console.log(getSun(secondSubjectArr2)); // should return 1
 console.log("----------------------------------------");
 
 // Exercice 3 & 5
-// Résous le sujet 1 avec une complexité algorithmique de O(n), c'est-à-dire que ton programme pourra parcourir plusieurs fois chaque élément du tableau (mais pas de boucle imbriquée !).
+// Résouds le sujet 1 avec une complexité algorithmique de O(n), c'est-à-dire que ton programme pourra parcourir plusieurs fois chaque élément du tableau (mais pas de boucle imbriquée !).
 const checkSum2 = (array, num) => {
   const numbers = [...array];
    let searchValues = new Set();
@@ -80,7 +80,7 @@ console.log(checkSum2(firstSubjectArr2, firstSubjectK2)); // should return false
 console.log("----------------------------------------");
 
 // Exercice 4 & 6 
-// Résous le sujet 2 avec une complexité algorithmique de O(n), c'est-à-dire que ton programme pourra parcourir plusieurs fois chaque élément du tableau (mais pas de boucle imbriquée !).
+// Résouds le sujet 2 avec une complexité algorithmique de O(n), c'est-à-dire que ton programme pourra parcourir plusieurs fois chaque élément du tableau (mais pas de boucle imbriquée !).
 const getSun2 = (array) => {
   const numbers = [...array];
   let counter = 1
