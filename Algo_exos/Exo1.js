@@ -18,8 +18,15 @@ const secondSubjectArr2 = [1, 4, 5, 8];
 // Résous le sujet 1 avec une complexité algorithmique de O(n²), c'est-à-dire que ton programme devra comparer chaque élément entre eux à l'aide de 2 boucles imbriquées.
 const checkSum = (array, num) => {
   const numbers = [...array];
+  //La premiere boucle FOR veut dire que i commence à 0 (i=0), la condition qui va faire que l'incrémentation vas se faire jusqu'à le nombre d'occurence du tableau (disons 10 éléments dans le tableau) et i++ veux dire qu'on ajoute à chaque fois 1 au i du départ jusqu'à ce que i ne soit plus inférieur à .length (10 par exemple)
+  //Donc ça ferais à chaque boucle jusqu'à etre supérieur à 10 et on arrête la boucle.
+  //for (let i = 0; i < numbers.length; i++)
+  //for (let i = 1; i < numbers.length; i++)
+  //for (let i = 2; i < numbers.length; i++)  
   for (let i = 0; i < numbers.length; i++) {
+    //C'est le même principe sauf que là on ne veux pas vérifier le premier chiffre du tableau mais le deuxième chiffre grâce à j = i + 1, et ensuite on a la même logique que pour la boucle du dessus
     for (let j = i + 1; j < numbers.length; j++) {
+      //Ici on dit numbers à [l'index i] (index qui augmente de 1 à chaque boucle) + numbers[l'index j] === num et return true
       if (numbers[i] + numbers[j] === num) return true;
     }
     return false;
